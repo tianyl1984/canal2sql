@@ -354,7 +354,7 @@ public class MysqlMultiStageCoprocessor extends AbstractCanalLifeCycle implement
             try {
                 LogEvent logEvent = event.getEvent();
                 if (event.getEntry() != null) {
-                    if (logEventFilter == null || logEventFilter.filter(logEvent) != null) {
+                    if (logEventFilter == null || logEventFilter.filter(logEvent, event.getEntry()) != null) {
                         transactionBuffer.add(event.getEntry());
                     }
                 }

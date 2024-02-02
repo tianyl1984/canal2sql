@@ -82,6 +82,9 @@ public class Canal2SqlStarter {
         Option sqlType = new Option("sql_type", true, "Specify sqlType");
         options.addOption(sqlType);
 
+        Option datafilter = new Option("data_filter", true, "Specify data filter configuration");
+        options.addOption(datafilter);
+
         CommandLineParser parser = new DefaultParser();
         HelpFormatter formatter = new HelpFormatter();
         CommandLine cmd;
@@ -116,6 +119,7 @@ public class Canal2SqlStarter {
         String endPositionInput = cmd.getOptionValue("end_position");
         String filterInput = cmd.getOptionValue("filter");
         String blackFilterInput = cmd.getOptionValue("black_filter");
+        String dataFilterInput = cmd.getOptionValue("data_filter");
         String modeInput = cmd.getOptionValue("mode");
         String instanceIdInput = cmd.getOptionValue("instanceId");
         String akInput = cmd.getOptionValue("ak");
@@ -141,6 +145,7 @@ public class Canal2SqlStarter {
         System.out.println("# End position: " + endPositionInput);
         System.out.println("# Filter: " + filterInput);
         System.out.println("# Blacklist filter: " + blackFilterInput);
+        System.out.println("# Data filter: " + dataFilterInput);
         System.out.println("# InstanceId: " + instanceIdInput);
         System.out.println("# Ak: " + akInput);
         System.out.println("# Sk: " + skInput);
@@ -172,6 +177,7 @@ public class Canal2SqlStarter {
         config.setEndPosition(endPositionInput);
         config.setFilter(filterInput);
         config.setBlackFilter(blackFilterInput);
+        config.setDataFilter(dataFilterInput);
         config.setDir(dirInput);
         config.setFileUrl(fileUrlInput);
         config.setMode(modeInput);

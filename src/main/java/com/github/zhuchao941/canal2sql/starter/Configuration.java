@@ -18,6 +18,7 @@ public class Configuration {
     private String endPosition;
     private String filter;
     private String blackFilter;
+    private String dataFilter;
     private String mode;
     private String instanceId;
     private String ak;
@@ -144,6 +145,14 @@ public class Configuration {
 
     public void setBlackFilter(String blackFilter) {
         this.blackFilter = blackFilter;
+    }
+
+    public String getDataFilter() {
+        return dataFilter;
+    }
+
+    public void setDataFilter(String dataFilter) {
+        this.dataFilter = dataFilter;
     }
 
     public String getMode() {

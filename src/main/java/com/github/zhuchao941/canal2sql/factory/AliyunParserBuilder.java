@@ -29,7 +29,7 @@ public class AliyunParserBuilder {
         parser.setMasterPosition(entryPosition);
         Long startPosition = StringUtils.isBlank(configuration.getStartPosition()) ? null : Long.parseLong(configuration.getStartPosition());
         Long endPosition = StringUtils.isBlank(configuration.getEndPosition()) ? null : Long.parseLong(configuration.getEndPosition());
-        parser.setLogEventFilter(new LogEventFilter(configuration.getStartDatetime(), configuration.getEndDatetime(), startPosition, endPosition));
+        parser.setLogEventFilter(new LogEventFilter(configuration.getStartDatetime(), configuration.getEndDatetime(), startPosition, endPosition, configuration.getDataFilter()));
         parser.setStartTime(configuration.getStartDatetime());
         parser.setEndTime(configuration.getEndDatetime());
         parser.setInstanceId(configuration.getInstanceId());

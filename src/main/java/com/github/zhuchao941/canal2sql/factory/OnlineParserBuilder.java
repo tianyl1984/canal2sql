@@ -30,7 +30,7 @@ public class OnlineParserBuilder {
         if (startFileWithPosition != null) {
             parser.setMasterPosition(new EntryPosition(startFileWithPosition.getFileName(), startFileWithPosition.getPosition()));
         }
-        parser.setLogEventFilter(new LogEventFilter(configuration.getStartDatetime(), configuration.getEndDatetime(), startFileWithPosition.getPosition(), endFileWithPosition.getPosition(), startFileWithPosition.getFileName(), endFileWithPosition.getFileName()));
+        parser.setLogEventFilter(new LogEventFilter(configuration.getStartDatetime(), configuration.getEndDatetime(), startFileWithPosition.getPosition(), endFileWithPosition.getPosition(), startFileWithPosition.getFileName(), endFileWithPosition.getFileName(), configuration.getDataFilter()));
         return parser;
     }
 

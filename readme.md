@@ -70,6 +70,8 @@ https://github.com/zhuchao941/canal2sql/releases/tag/v1.1.1
 
 - -sql-type 只解析指定类型，支持 insert,update,delete,ddl。多个类型用逗号隔开，如--sql-type=insert,delete。可选。默认为insert,update,delete,ddl
 
+- -data_filter 数据维度过滤，格式：列表:表名，比如：id:2584，只过滤id=2584的数据
+
 **离线解析模式**
 
 - -ddl 本地DDL文件，用来还原列
